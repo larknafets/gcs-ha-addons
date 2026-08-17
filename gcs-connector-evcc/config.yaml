@@ -1,0 +1,41 @@
+name: GCS evcc Connector
+version: "0.0.2"
+slug: gcs-connector-evcc
+description: Syncs completed evcc charging sessions to the Green Charging Society (GCS) platform
+url: https://github.com/larknafets/gcs-connector-evcc
+arch:
+  - amd64
+  - aarch64
+  - armv7
+init: false
+image: ghcr.io/larknafets/gcs-connector-evcc
+ports:
+  8734/tcp: 8734
+ports_description:
+  8734/tcp: Sync-now webhook (optional, only used when webhook_port is enabled)
+options:
+  api_base_url: ""
+  evcc_base_url: "http://local-evcc:7070"
+  api_key: ""
+  api_secret: ""
+  site_name: ""
+  sync_interval_minutes: 60
+  ignore_vehicles: []
+  ignore_loadpoints: []
+  debug: false
+  webhook_port: 8734
+schema:
+  api_base_url: url
+  evcc_base_url: url
+  api_key: str
+  api_secret: password
+  site_name: str
+  sync_interval_minutes: int(1,)
+  ignore_vehicles:
+    - str
+  ignore_loadpoints:
+    - str
+  debug: bool
+  log_file: str?
+  webhook_port: port?
+  webhook_secret: password?
