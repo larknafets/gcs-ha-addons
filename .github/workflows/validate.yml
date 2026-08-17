@@ -9,6 +9,7 @@ on:
     paths:
       - "**/config.*"
       - "repository.yaml"
+  workflow_dispatch:
 
 permissions:
   contents: read
