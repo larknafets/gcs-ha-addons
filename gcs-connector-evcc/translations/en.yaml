@@ -1,0 +1,56 @@
+---
+configuration:
+  api_base_url:
+    name: GCS API Base URL
+    description: >-
+      The address of your GCS instance (central or self-hosted).
+  evcc_base_url:
+    name: evcc Base URL
+    description: >-
+      The address of your local evcc instance, e.g. http://local-evcc:7070
+      when using the official evcc add-on, or http://<host>:7070 otherwise.
+  api_key:
+    name: GCS API Key
+    description: >-
+      Connector API key from your GCS profile ("Connector/API access").
+  api_secret:
+    name: GCS API Secret
+    description: >-
+      The secret that belongs to your GCS API key.
+  site_name:
+    name: Site Name
+    description: >-
+      Label for this connector instance, sent with every charging session.
+      Useful if you run more than one connector.
+  sync_interval_minutes:
+    name: Sync Interval (minutes)
+    description: >-
+      How often to check evcc for newly completed charging sessions.
+  ignore_vehicles:
+    name: Ignored Vehicles
+    description: >-
+      evcc vehicle names to exclude from syncing, e.g. a private second car.
+  ignore_loadpoints:
+    name: Ignored Loadpoints
+    description: >-
+      evcc loadpoint names to exclude from syncing, e.g. a non-EV loadpoint.
+  debug:
+    name: Debug Logging
+    description: >-
+      Enables verbose logging, including HTTP request details.
+  log_file:
+    name: Log File Path
+    description: >-
+      Optional path to a log file. Leave empty to log to stdout, which
+      appears in this add-on's Log tab.
+  webhook_port:
+    name: Webhook Port
+    description: >-
+      Port for the optional sync-now webhook, triggered by evcc after a
+      charging session ends. Must match the port exposed in this add-on's
+      Network settings.
+  webhook_secret:
+    name: Webhook Secret
+    description: >-
+      Bearer token evcc must send when calling the sync-now webhook.
+      Required only when Webhook Port is set.

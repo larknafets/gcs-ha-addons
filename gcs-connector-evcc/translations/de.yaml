@@ -1,0 +1,58 @@
+---
+configuration:
+  api_base_url:
+    name: GCS API Base-URL
+    description: >-
+      Adresse deiner GCS-Instanz (zentral oder selbst gehostet).
+  evcc_base_url:
+    name: evcc Base-URL
+    description: >-
+      Adresse deiner lokalen evcc-Instanz, z. B. http://local-evcc:7070
+      bei Nutzung des offiziellen evcc-Add-ons, sonst http://<host>:7070.
+  api_key:
+    name: GCS API-Key
+    description: >-
+      Connector-API-Key aus deinem GCS-Profil ("Connector/API-Zugang").
+  api_secret:
+    name: GCS API-Secret
+    description: >-
+      Das zum API-Key gehörige Secret.
+  site_name:
+    name: Standortname
+    description: >-
+      Bezeichnung dieser Connector-Instanz, wird bei jeder Ladung
+      mitgeschickt. Sinnvoll, wenn du mehrere Connector-Instanzen betreibst.
+  sync_interval_minutes:
+    name: Sync-Takt (Minuten)
+    description: >-
+      Wie oft evcc auf neue, abgeschlossene Ladesessions geprüft wird.
+  ignore_vehicles:
+    name: Ausgeschlossene Fahrzeuge
+    description: >-
+      evcc-Fahrzeugnamen, die von der Synchronisation ausgeschlossen werden
+      sollen, z. B. ein privater Zweitwagen.
+  ignore_loadpoints:
+    name: Ausgeschlossene Ladepunkte
+    description: >-
+      evcc-Ladepunktnamen, die von der Synchronisation ausgeschlossen
+      werden sollen, z. B. ein Nicht-EV-Ladepunkt.
+  debug:
+    name: Debug-Logging
+    description: >-
+      Aktiviert ausführliches Logging inklusive HTTP-Request-Details.
+  log_file:
+    name: Pfad zur Log-Datei
+    description: >-
+      Optionaler Pfad zu einer Log-Datei. Leer lassen für Ausgabe auf
+      stdout, sichtbar im Protokoll-Tab dieses Add-ons.
+  webhook_port:
+    name: Webhook-Port
+    description: >-
+      Port für den optionalen Sofort-Sync-Webhook, den evcc nach Ladeende
+      aufruft. Muss mit dem in den Netzwerk-Einstellungen dieses Add-ons
+      freigegebenen Port übereinstimmen.
+  webhook_secret:
+    name: Webhook-Secret
+    description: >-
+      Bearer-Token, das evcc beim Aufruf des Sofort-Sync-Webhooks
+      mitschicken muss. Nur nötig, wenn Webhook-Port gesetzt ist.
