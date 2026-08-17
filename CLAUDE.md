@@ -2,7 +2,7 @@
 
 ### Issue tracker
 
-Issues are tracked as GitHub Issues on larknafets/gcs-hassio-addons via the gh CLI. See `docs/agents/issue-tracker.md`.
+Issues are tracked as GitHub Issues on larknafets/gcs-ha-addons via the gh CLI. See `docs/agents/issue-tracker.md`.
 
 ### Domain docs
 
