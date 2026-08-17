@@ -72,18 +72,17 @@ jobs:
           path: "./${{ matrix.addon }}"
           community: false
 
-      - name: Gather add-on information
+      - name: Extract image and version from config.yaml
         id: info
-        uses: frenck/action-addon-information@v1.4
-        with:
-          path: "./${{ matrix.addon }}/"
-
-      - name: Verify referenced image manifest exists
         run: |
           set -euo pipefail
-          image="${{ steps.info.outputs.image }}"
-          version="${{ steps.info.outputs.version }}"
-          docker manifest inspect "${image}:${version}" > /dev/null
+          image=$(ruby -ryaml -e "puts YAML.load_file('${{ matrix.addon }}/config.yaml').fetch('image')")
+          version=$(ruby -ryaml -e "puts YAML.load_file('${{ matrix.addon }}/config.yaml').fetch('version')")
+          echo "image=${image}" >> "$GITHUB_OUTPUT"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+
+      - name: Verify referenced image manifest exists
+        run: docker manifest inspect "${{ steps.info.outputs.image }}:${{ steps.info.outputs.version }}" > /dev/null
 
   lint-repository-yaml:
     name: Lint repository.yaml
