@@ -1,5 +1,16 @@
 Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
+## [v0.0.5] - 2026-08-18
+
+## Changelog
+* Deepen Config validation: merge FromMap/FromOptionsJSON's duplicated rules
+* Give the session-eligibility pipeline a real interface, not an implied call order
+* Put a seam under Orchestrator's evcc/GCS dependencies
+* Record ADR-0001: wizard.RunInit stays thin and untested
+* Stop gcs.Client's logger leaking across the package seam
+
+
+
 ## [v0.0.4] - 2026-08-17
 
 ## Changelog
