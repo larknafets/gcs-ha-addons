@@ -31,18 +31,10 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            base="${{ github.event.pull_request.base.sha }}"
-          else
-            base="${{ github.event.before }}"
-          fi
-
-          # First push to a new branch / repo: github.event.before is all zeroes.
-          # Diff against the empty tree instead so every file counts as changed.
-          if [ -z "$base" ] || [ "$base" = "0000000000000000000000000000000000000000" ]; then
-            base=$(git hash-object -t tree /dev/null)
-          fi
-
+          base=$(.github/scripts/resolve-base-ref.sh \
+            "${{ github.event_name }}" \
+            "${{ github.event.pull_request.base.sha }}" \
+            "${{ github.event.before }}")
           head="${{ github.sha }}"
 
           changed_addons=$(.github/scripts/detect-changed-addons.sh "$base" "$head")
@@ -77,10 +69,9 @@ jobs:
         id: info
         run: |
           set -euo pipefail
-          image=$(ruby -ryaml -e "puts YAML.load_file('${{ matrix.addon }}/config.yaml').fetch('image')")
-          version=$(ruby -ryaml -e "puts YAML.load_file('${{ matrix.addon }}/config.yaml').fetch('version')")
-          echo "image=${image}" >> "$GITHUB_OUTPUT"
-          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          info=$(.github/scripts/extract-addon-image.sh "${{ matrix.addon }}")
+          echo "image=$(jq -r .image <<< "$info")" >> "$GITHUB_OUTPUT"
+          echo "version=$(jq -r .version <<< "$info")" >> "$GITHUB_OUTPUT"
 
       - name: Verify referenced image manifest exists
         run: docker manifest inspect "${{ steps.info.outputs.image }}:${{ steps.info.outputs.version }}" > /dev/null
