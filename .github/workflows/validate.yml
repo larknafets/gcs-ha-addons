@@ -2,13 +2,7 @@ name: Validate Add-ons
 
 on:
   push:
-    paths:
-      - "**/config.*"
-      - "repository.yaml"
   pull_request:
-    paths:
-      - "**/config.*"
-      - "repository.yaml"
   workflow_dispatch:
 
 permissions:
