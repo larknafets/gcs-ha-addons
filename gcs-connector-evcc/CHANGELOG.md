@@ -1,5 +1,17 @@
 Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
+## [v0.0.6] - 2026-08-20
+
+## Changelog
+* Add explicit non-root USER directive to Dockerfile
+* Bump golang.org/x/sys to fix integer overflow in NewNTUnicodeString
+* Bump golang.org/x/text to fix DoS via invalid UTF-8 input
+* Pin third-party GitHub Actions to commit SHAs
+* Remove site_name config field
+* gofmt: realign struct literal after site_name removal
+
+
+
 ## [v0.0.5] - 2026-08-18
 
 ## Changelog
