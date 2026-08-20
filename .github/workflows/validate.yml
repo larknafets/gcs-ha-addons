@@ -16,7 +16,7 @@ jobs:
       repositoryYamlChanged: ${{ steps.detect.outputs.repository_yaml_changed }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -51,7 +51,7 @@ jobs:
         addon: ${{ fromJSON(needs.detect-changes.outputs.changedAddons) }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Add-on schema lint
         uses: frenck/action-addon-linter@b9cfd1bc62ba60d2c4fc96317b5f7ada5923f4a7 # v2
@@ -77,7 +77,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Validate repository.yaml is well-formed YAML
         run: ruby -ryaml -e "YAML.load_file('repository.yaml')"
