@@ -17,11 +17,6 @@ configuration:
     name: GCS API Secret
     description: >-
       The secret that belongs to your GCS API key.
-  site_name:
-    name: Site Name
-    description: >-
-      Label for this connector instance, sent with every charging session.
-      Useful if you run more than one connector.
   sync_interval_minutes:
     name: Sync Interval (minutes)
     description: >-

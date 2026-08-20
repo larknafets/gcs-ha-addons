@@ -17,11 +17,6 @@ configuration:
     name: GCS API-Secret
     description: >-
       Das zum API-Key gehörige Secret.
-  site_name:
-    name: Standortname
-    description: >-
-      Bezeichnung dieser Connector-Instanz, wird bei jeder Ladung
-      mitgeschickt. Sinnvoll, wenn du mehrere Connector-Instanzen betreibst.
   sync_interval_minutes:
     name: Sync-Takt (Minuten)
     description: >-

@@ -18,7 +18,6 @@ options:
   evcc_base_url: "http://local-evcc:7070"
   api_key: ""
   api_secret: ""
-  site_name: ""
   sync_interval_minutes: 60
   ignore_vehicles: []
   ignore_loadpoints: []
@@ -29,7 +28,6 @@ schema:
   evcc_base_url: url
   api_key: str
   api_secret: password
-  site_name: str
   sync_interval_minutes: int(1,)
   ignore_vehicles:
     - str
