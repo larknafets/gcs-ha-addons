@@ -1,5 +1,22 @@
 Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
+## [v0.0.7] - 2026-08-26
+
+## Changelog
+* Add CI workflow: go test and golangci-lint on push/PR
+* Add Dependabot config for gomod, github-actions, and docker
+* Bump docker/build-push-action from 6.19.2 to 7.3.0 (#35)
+* Bump docker/login-action from 3.7.0 to 4.6.0 (#36)
+* Bump docker/setup-buildx-action from 3.12.0 to 4.3.0 (#37)
+* Bump docker/setup-qemu-action from 3.7.0 to 4.2.0 (#33)
+* Bump github.com/stretchr/testify in the go-dependencies group (#32)
+* Bump goreleaser/goreleaser-action from 6.4.0 to 7.2.3 (#34)
+* Fix CI: pin golangci-lint-action to v9.3.0, lint version to v2.13.0
+* Fix golangci-lint findings ahead of adding lint CI
+* Log public_id and 422 error body from Connector API responses
+
+
+
 ## [v0.0.6] - 2026-08-20
 
 ## Changelog
