@@ -1,5 +1,5 @@
 name: GCS evcc Connector
-version: "0.0.7"
+version: "0.0.8"
 slug: gcs-connector-evcc
 description: Syncs completed evcc charging sessions to the Green Charging Society (GCS) platform
 url: https://github.com/larknafets/gcs-connector-evcc

@@ -1,5 +1,12 @@
 Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
+## [v0.0.8] - 2026-09-05
+
+## Changelog
+* Store HA add-on state.json under addon_config, not /data
+
+
+
 ## [v0.0.7] - 2026-08-26
 
 ## Changelog
