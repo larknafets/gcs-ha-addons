@@ -9,6 +9,8 @@ arch:
   - armv7
 init: false
 image: ghcr.io/larknafets/gcs-connector-evcc
+map:
+  - addon_config:rw
 ports:
   8734/tcp: 8734
 ports_description:
