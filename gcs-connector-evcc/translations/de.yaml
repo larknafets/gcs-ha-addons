@@ -21,11 +21,13 @@ configuration:
     name: Sync-Takt (Minuten)
     description: >-
       Wie oft evcc auf neue, abgeschlossene Ladesessions geprüft wird.
-  ignore_vehicles:
-    name: Ausgeschlossene Fahrzeuge
+  sync_vehicles:
+    name: Synchronisierte Fahrzeuge
     description: >-
-      evcc-Fahrzeugnamen, die von der Synchronisation ausgeschlossen werden
-      sollen, z. B. ein privater Zweitwagen.
+      evcc-Fahrzeugnamen, die synchronisiert werden sollen. Unbekannte
+      Fahrzeuge (z. B. Gäste-Ladevorgänge) werden immer synchronisiert,
+      unabhängig von dieser Liste. Leere Liste = kein benanntes Fahrzeug
+      wird synchronisiert.
   ignore_loadpoints:
     name: Ausgeschlossene Ladepunkte
     description: >-

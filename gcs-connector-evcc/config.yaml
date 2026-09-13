@@ -21,7 +21,7 @@ options:
   api_key: ""
   api_secret: ""
   sync_interval_minutes: 60
-  ignore_vehicles: []
+  sync_vehicles: []
   ignore_loadpoints: []
   debug: false
   webhook_port: 8734
@@ -31,7 +31,7 @@ schema:
   api_key: str
   api_secret: password
   sync_interval_minutes: int(1,)
-  ignore_vehicles:
+  sync_vehicles:
     - str
   ignore_loadpoints:
     - str

@@ -21,10 +21,12 @@ configuration:
     name: Sync Interval (minutes)
     description: >-
       How often to check evcc for newly completed charging sessions.
-  ignore_vehicles:
-    name: Ignored Vehicles
+  sync_vehicles:
+    name: Synced Vehicles
     description: >-
-      evcc vehicle names to exclude from syncing, e.g. a private second car.
+      evcc vehicle names to sync. Unrecognized vehicles (e.g. guest charges)
+      always sync regardless of this list. Empty list = no named vehicle
+      syncs.
   ignore_loadpoints:
     name: Ignored Loadpoints
     description: >-
