@@ -5,21 +5,20 @@ Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 ## v0.1.0 - 2026-09-13
 
 ## Changelog
-### New Features
-* Improve release changelog generation for GoReleaser and HA add-on mirror
-* Add local dev/tooling entries to gitignore; point CLAUDE.md at AGENTS.md
-* Add AGENTS.md
+### Breaking Changes
+* invert vehicle filter from excludelist to allowlist
 ### Bug Fixes
 * restore .env/state.json ignores, fix binary name
 ### Other Changes
-* feat!: invert vehicle filter from excludelist to allowlist
+* Improve release changelog generation for GoReleaser and HA add-on mirror
+* Add local dev/tooling entries to gitignore; point CLAUDE.md at AGENTS.md
+* Add AGENTS.md
 * Bump golang in the docker-dependencies group across 1 directory (#42)
 * Bump github.com/gofrs/flock (#43)
 * Bump docker/setup-qemu-action in the github-actions group (#44)
 * Bump docker/metadata-action from 5.10.0 to 6.2.0 (#41)
 * Bump actions/setup-go from 5 to 7 (#40)
 * Bump actions/checkout from 4 to 7 (#39)
-
 
 
 ## v0.0.8 - 2026-09-05
