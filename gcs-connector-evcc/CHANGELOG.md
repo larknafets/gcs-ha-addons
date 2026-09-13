@@ -1,13 +1,35 @@
+# Changelog
+
 Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
-## [v0.0.8] - 2026-09-05
+## v0.1.0 - 2026-09-13
+
+## Changelog
+### New Features
+* Improve release changelog generation for GoReleaser and HA add-on mirror
+* Add local dev/tooling entries to gitignore; point CLAUDE.md at AGENTS.md
+* Add AGENTS.md
+### Bug Fixes
+* restore .env/state.json ignores, fix binary name
+### Other Changes
+* feat!: invert vehicle filter from excludelist to allowlist
+* Bump golang in the docker-dependencies group across 1 directory (#42)
+* Bump github.com/gofrs/flock (#43)
+* Bump docker/setup-qemu-action in the github-actions group (#44)
+* Bump docker/metadata-action from 5.10.0 to 6.2.0 (#41)
+* Bump actions/setup-go from 5 to 7 (#40)
+* Bump actions/checkout from 4 to 7 (#39)
+
+
+
+## v0.0.8 - 2026-09-05
 
 ## Changelog
 * Store HA add-on state.json under addon_config, not /data
 
 
 
-## [v0.0.7] - 2026-08-26
+## v0.0.7 - 2026-08-26
 
 ## Changelog
 * Add CI workflow: go test and golangci-lint on push/PR
@@ -24,7 +46,7 @@ Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
 
 
-## [v0.0.6] - 2026-08-20
+## v0.0.6 - 2026-08-20
 
 ## Changelog
 * Add explicit non-root USER directive to Dockerfile
@@ -36,7 +58,7 @@ Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
 
 
-## [v0.0.5] - 2026-08-18
+## v0.0.5 - 2026-08-18
 
 ## Changelog
 * Deepen Config validation: merge FromMap/FromOptionsJSON's duplicated rules
@@ -47,14 +69,14 @@ Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
 
 
-## [v0.0.4] - 2026-08-17
+## v0.0.4 - 2026-08-17
 
 ## Changelog
 * Fix hassio job: git commit -am silently drops new files (#24)
 
 
 
-## [v0.0.3] - 2026-08-17
+## v0.0.3 - 2026-08-17
 
 ## Changelog
 * Mirror release notes into gcs-hassio-addons's CHANGELOG.md (#22)
@@ -64,7 +86,7 @@ Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
 
 
-## [v0.0.2] - 2026-08-16
+## v0.0.2 - 2026-08-16
 
 ## Changelog
 * Document the Home Assistant add-on as an installation option
@@ -72,7 +94,7 @@ Full release details: https://github.com/larknafets/gcs-connector-evcc/releases
 
 
 
-## [v0.0.1] - 2026-08-16
+## v0.0.1 - 2026-08-16
 
 ## Changelog
 * Add Docker Compose installation variant to README
